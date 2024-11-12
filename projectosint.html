@@ -31,8 +31,7 @@
     <div>
         <button onclick="searchGoogle()">Google</button>
         <button onclick="searchBing()">Bing</button>
-        <button onclick="searchLinkedIn()">LinkedIn</button>
-        <button onclick="searchTwitter()">Twitter</button>
+        <p>Untuk Web Pencarian Lain Akan Segera Di Update</p>
     </div>
 
     <script>
@@ -53,24 +52,6 @@
             const query = getQuery();
             if (query) {
                 window.open(`https://www.bing.com/search?q=${encodeURIComponent(query)}`, '_blank');
-            } else {
-                alert("Masukkan kata kunci pencarian.");
-            }
-        }
-
-        function searchLinkedIn() {
-            const query = getQuery();
-            if (query) {
-                window.open(`https://www.linkedin.com/search/results/all/?keywords=${encodeURIComponent(query)}`, '_blank');
-            } else {
-                alert("Masukkan kata kunci pencarian.");
-            }
-        }
-
-        function searchTwitter() {
-            const query = getQuery();
-            if (query) {
-                window.open(`https://twitter.com/search?q=${encodeURIComponent(query)}&src=typed_query`, '_blank');
             } else {
                 alert("Masukkan kata kunci pencarian.");
             }
