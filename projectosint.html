@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Search Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            width: 150px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>OSINT Search Tool</h1>
+    <input type="text" id="searchQuery" placeholder="Masukkan informasi yang ingin dicari">
+    <div>
+        <button onclick="searchGoogle()">Google</button>
+        <button onclick="searchBing()">Bing</button>
+        <button onclick="searchLinkedIn()">LinkedIn</button>
+        <button onclick="searchTwitter()">Twitter</button>
+    </div>
+
+    <script>
+        function getQuery() {
+            return document.getElementById("searchQuery").value;
+        }
+
+        function searchGoogle() {
+            const query = getQuery();
+            if (query) {
+                window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+            } else {
+                alert("Masukkan kata kunci pencarian.");
+            }
+        }
+
+        function searchBing() {
+            const query = getQuery();
+            if (query) {
+                window.open(`https://www.bing.com/search?q=${encodeURIComponent(query)}`, '_blank');
+            } else {
+                alert("Masukkan kata kunci pencarian.");
+            }
+        }
+
+        function searchLinkedIn() {
+            const query = getQuery();
+            if (query) {
+                window.open(`https://www.linkedin.com/search/results/all/?keywords=${encodeURIComponent(query)}`, '_blank');
+            } else {
+                alert("Masukkan kata kunci pencarian.");
+            }
+        }
+
+        function searchTwitter() {
+            const query = getQuery();
+            if (query) {
+                window.open(`https://twitter.com/search?q=${encodeURIComponent(query)}&src=typed_query`, '_blank');
+            } else {
+                alert("Masukkan kata kunci pencarian.");
+            }
+        }
+    </script>
+</body>
+</html>
