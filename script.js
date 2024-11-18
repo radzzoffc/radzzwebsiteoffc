@@ -65,7 +65,7 @@ function addOrder(event) {
 }
 
 function logout() {
-  location.href = "index.html";
+  location.href = "siliwangisct.html";
 }
 
 // Event Listeners
