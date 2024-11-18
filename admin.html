@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siliwangi | Admin Control</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <main>
+    <form id="add-order-form">
+      <h2>Tambah Pemesanan Baru</h2>
+      <input type="text" id="name" placeholder="Nama" required>
+      <input type="text" id="class" placeholder="Kelas" required>
+      <button type="submit">Tambah</button>
+    </form>
+
+    <h2>Daftar Pemesanan</h2>
+    <table id="orders-table-admin">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Kelas</th>
+          <th>Status</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="orders-body-admin">
+        <!-- Data akan dimuat dari script.js -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
